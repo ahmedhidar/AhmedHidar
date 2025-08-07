@@ -79,7 +79,7 @@ export const projects = [
     id: 1,
     title: "Easy Estate – Real Estate Platform",
     des: "Developed a subscription-based property system with authentication, filters, Google Maps, and secure RESTful APIs.",
-    img: "easyestate.png",
+    img: "/easyestate.png",
     iconLists: [
       "/laravel.svg",
       "/tail.svg",
@@ -93,7 +93,7 @@ export const projects = [
     id: 2,
     title: "findly Job Board Platform",
     des: "Implemented job posting, application tracking with optimized performance.",
-    img: "jobboard.png",
+    img: "/jobboard.png",
     iconLists: [
       "/laravel.svg",
       "/tail.svg",
