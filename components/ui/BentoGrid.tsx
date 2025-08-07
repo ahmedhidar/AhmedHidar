@@ -6,7 +6,6 @@ import Lottie from "react-lottie";
 
 import { cn } from "@/lib/utils";
 
-
 import { BackgroundGradientAnimation } from "./GradientBg";
 import GridGlobe from "./GridGlobe";
 import animationData from "@/data/confetti.json";
@@ -52,8 +51,8 @@ export const BentoGridItem = ({
   titleClassName?: string;
   spareImg?: string;
 }) => {
-  const leftLists = ["ReactJS", "Express", "Typescript"];
-  const rightLists = ["VueJS", "NuxtJS", "GraphQL"];
+  const leftLists = ["PHP", "Mysql", "Laravel"];
+  const rightLists = ["Javascript", "ReactJs", "Livewire"];
 
   const [copied, setCopied] = useState(false);
 
@@ -67,7 +66,7 @@ export const BentoGridItem = ({
   };
 
   const handleCopy = () => {
-    const text = "hsu@jsmastery.pro";
+    const text = "ahmedheedar@gmail.com";
     navigator.clipboard.writeText(text);
     setCopied(true);
   };
@@ -88,19 +87,37 @@ export const BentoGridItem = ({
       }}
     >
       {/* add img divs */}
-      <div className={`${id === 6 && "flex justify-center"} h-full`}>
-        <div className="w-full h-full absolute">
-          {img && (
+      <div className={`${id === 6 && "flex justify-center"} h-full relative`}>
+        {/* For item 1: image on the right, full height */}
+        {id === 1 && img && (
+          <div className="absolute right-0 top-0 h-full w-1/2 flex items-center justify-end z-10 md:w-1/2 w-full md:items-center items-start">
             <img
               src={img}
               alt={img}
-              className={cn(imgClassName, "object-cover object-center ")}
+              className={cn(
+                imgClassName,
+                // On mobile: show top of image, on md+: show right side
+                "object-cover h-full w-full object-right md:object-right object-top"
+              )}
             />
-          )}
-        </div>
+          </div>
+        )}
+        {/* Remove the duplicated background image for item 1 */}
+        {id !== 1 && (
+          <div className="w-full h-full absolute">
+            {img && (
+              <img
+                src={img}
+                alt={img}
+                className={cn(imgClassName, "object-cover object-center ")}
+              />
+            )}
+          </div>
+        )}
         <div
-          className={`absolute right-0 -bottom-5 ${id === 5 && "w-full opacity-80"
-            } `}
+          className={`absolute right-0 -bottom-5 ${
+            id === 5 && "w-full opacity-80"
+          } `}
         >
           {spareImg && (
             <img
@@ -123,17 +140,47 @@ export const BentoGridItem = ({
             titleClassName,
             "group-hover/bento:translate-x-2 transition duration-200 relative md:h-full min-h-40 flex flex-col px-5 p-5 lg:p-10"
           )}
+          style={
+            id === 1
+              ? {
+                  zIndex: 20,
+                  width: "100%",
+                  background:
+                    "linear-gradient(90deg, #000319 60%, transparent 100%)",
+                  position: "relative",
+                }
+              : {}
+          }
         >
           {/* change the order of the title and des, font-extralight, remove text-xs text-neutral-600 dark:text-neutral-300 , change the text-color */}
           <div className="font-sans font-extralight md:max-w-32 md:text-xs lg:text-base text-sm text-[#C1C2D3] z-10">
             {description}
           </div>
-          {/* add text-3xl max-w-96 , remove text-neutral-600 dark:text-neutral-300*/}
-          {/* remove mb-2 mt-2 */}
+          {/* Main title in white */}
           <div
-            className={`font-sans text-lg lg:text-3xl max-w-96 font-bold z-10`}
+            className="font-sans text-lg lg:text-3xl max-w-96 font-bold z-10"
+            style={id === 1 ? { color: "#fff", position: "relative" } : {}}
           >
             {title}
+            {/* Duplicate title, only visible on right side, color #000319 */}
+            {id === 1 && (
+              <span
+                style={{
+                  position: "absolute",
+                  left: 0,
+                  top: 0,
+                  width: "100%",
+                  color: "#000319",
+                  WebkitMaskImage:
+                    "linear-gradient(to right, transparent 60%, black 100%)",
+                  maskImage:
+                    "linear-gradient(to right, transparent 60%, black 100%)",
+                  pointerEvents: "none",
+                }}
+              >
+                {title}
+              </span>
+            )}
           </div>
 
           {/* for the github 3d globe */}
@@ -176,8 +223,9 @@ export const BentoGridItem = ({
               {/* remove focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50 */}
               {/* add handleCopy() for the copy the text */}
               <div
-                className={`absolute -bottom-5 right-0 ${copied ? "block" : "block"
-                  }`}
+                className={`absolute -bottom-5 right-0 ${
+                  copied ? "block" : "block"
+                }`}
               >
                 {/* <img src="/confetti.gif" alt="confetti" /> */}
                 <Lottie options={defaultOptions} height={200} width={400} />
