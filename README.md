@@ -23,7 +23,7 @@ Build modern, secure, and scalable Backend APIs.
 
 Develop full-stack applications from scratch to deployment.
 
-Integrate advanced features like online payments, real-time updates, and microservices.
+Integrate advanced features like online payments, real-time updates.
 
 📬 **Let's Connect:**  
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/ahmed-haidar07/)  
