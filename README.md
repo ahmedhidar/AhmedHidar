@@ -27,7 +27,7 @@ Integrate advanced features like online payments, real-time updates, and microse
 
 📬 **Let's Connect:**  
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)]([https://www.linkedin.com/in/yourusername/](https://www.linkedin.com/in/ahmed-haidar07/))  
-[![Portfolio]([https://img.shields.io/badge/Portfolio-000000?style=for-the-badge&logo=About.me&logoColor=white)]((https://ahmed-hidar.vercel.app/))  
+[![Portfolio]([https://img.shields.io/badge/Portfolio-000000?style=for-the-badge&logo=About.me&logoColor=white)]((https://ahmed-hidar.vercel.app/)])  
 [![Email](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:ahmedheedar@gmail.com)
 
 
