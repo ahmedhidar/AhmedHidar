@@ -103,14 +103,14 @@ export const projects = [
     ],
     link: "/ui.yoom.com",
   },
-  // {
-  //   id: 3,
-  //   title: "AI Image SaaS - Canva Application",
-  //   des: "A REAL Software-as-a-Service app with AI features and a payments and credits system using the latest tech stack.",
-  //   img: "/p3.svg",
-  //   iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/c.svg"],
-  //   link: "/ui.aiimg.com",
-  // },
+  {
+    id: 3,
+    title: "Akalat-Multi Restaurant Food Ordering App",
+    des: "A complete, advanced Laravel 11 project demonstrating multi-restaurant food ordering with user roles, multi-authentication, payments, reviews, and favorites. Fully featured with dynamic emails, cart system, PDF invoices, and data import/export.",
+    img: "/akalat.png",
+    iconLists: ["/laravel.svg", "/tail.svg", "/mysql.svg"],
+    link: "/ui.aiimg.com",
+  },
   // {
   //   id: 4,
   //   title: "Animated Apple Iphone 3D Website",

@@ -90,14 +90,14 @@ export const BentoGridItem = ({
       <div className={`${id === 6 && "flex justify-center"} h-full relative`}>
         {/* For item 1: image on the right, full height */}
         {id === 1 && img && (
-          <div className="absolute right-0 top-0 h-full w-1/2 flex items-center justify-end z-10 md:w-1/2 w-full md:items-center items-start">
+          <div className="absolute right-0 top-0 h-full w-1/2 flex items-center justify-end z-10 md:w-1/2 w-full md:items-center items-end">
             <img
               src={img}
               alt={img}
               className={cn(
                 imgClassName,
-                // On mobile: show top of image, on md+: show right side
-                "object-cover h-full w-full object-right md:object-right object-top"
+                // On mobile: show bottom of image, on md+: show right side
+                "object-contain md:object-cover h-full w-full object-right md:object-right object-bottom md:object-top"
               )}
             />
           </div>
