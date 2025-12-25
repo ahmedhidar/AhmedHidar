@@ -7,7 +7,7 @@ Backend: PHP, Laravel, MySQL, RESTful APIs, Sanctum, Livewire
 
 Frontend: Angular, React, JavaScript, HTML, CSS, Bootstrap
 
-Tools & DevOps: Docker, Apache Kafka, Git, GitHub Actions
+Tools & DevOps: Docker, Apache, Git, GitHub Actions
 
 Other Skills: Payment Integration (Stripe, Paymob), Real-Time Notifications (Laravel Reverb), Multivendor Systems, Event-Driven Architecture
 
